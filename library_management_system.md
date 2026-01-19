@@ -59,3 +59,16 @@ The code follows a hierarchical structure to ensure data consistency and reusabi
 | Polymorphism  | display_info() works on both Books and DigitalResources, even though they are different types.   | A single interface/display method handles multiple types.     |
 | Composition   | The Checkout class has a Media object inside it rather than being a type of media itself.        | Checkout uses/holds a Media instance.                         |
 | Encapsulation | All data related to a book (pages, author, title) is bundled together within the class instance. | Book encapsulates its own data fields (pages, author, title). |
+
+# UML-Style Structure
+
+Media
+├── Book
+└── DigitalResource
+
+Library
+├── search()
+├── add_media()
+
+Checkout
+└── Media
