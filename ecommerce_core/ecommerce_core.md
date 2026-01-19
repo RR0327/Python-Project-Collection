@@ -6,7 +6,7 @@ This document provides a **file-by-file and line-by-line explanation** of the pr
 
 ---
 
-## 1️⃣ System Overview
+## System Overview
 
 The system separates **business logic** from **infrastructure concerns** using Dependency Injection.
 
@@ -19,7 +19,7 @@ OrderService
 
 ---
 
-## 2️⃣ Package-Level View (UML)
+## Package-Level View (UML)
 
 ```mermaid
 flowchart TB
@@ -45,7 +45,7 @@ flowchart TB
 
 ---
 
-## 3️⃣ notifications/base.py
+## notifications/base.py
 
 ### Notification Interface
 
@@ -71,7 +71,7 @@ def send(self, message: str) -> None:
 
 ---
 
-## 4️⃣ notifications/email.py
+## notifications/email.py
 
 ### Email Notification Implementation
 
@@ -95,7 +95,7 @@ def send(self, message: str) -> None:
 
 ---
 
-## 5️⃣ notifications/sms.py
+## notifications/sms.py
 
 ### SMS Notification Implementation
 
@@ -113,7 +113,7 @@ def send(self, message: str) -> None:
 
 ---
 
-## 6️⃣ order/entity.py
+## order/entity.py
 
 ### Order Domain Model (UML)
 
@@ -148,7 +148,7 @@ def mark_paid(self):
 
 ---
 
-## 7️⃣ order/service.py
+## order/service.py
 
 ### Order Processing Logic
 
@@ -180,7 +180,7 @@ self.notifier.send(...)
 
 ---
 
-## 8️⃣ main.py
+## main.py
 
 ### Application Composition Root
 
@@ -199,7 +199,7 @@ sms_notifier = SMSNotification()
 
 ---
 
-## 9️⃣ Runtime Execution Flow (Sequence UML)
+## Runtime Execution Flow (Sequence UML)
 
 ```mermaid
 sequenceDiagram
@@ -215,7 +215,7 @@ sequenceDiagram
 
 ---
 
-## 🔄 How the Code Works (Step-by-Step)
+## How the Code Works (Step-by-Step)
 
 1. Application starts in `main.py`
 2. A notification provider is selected
@@ -225,7 +225,7 @@ sequenceDiagram
 
 ---
 
-## 🧪 Testing Advantage
+## Testing Advantage
 
 Because dependencies are injected:
 
@@ -240,16 +240,3 @@ class FakeNotifier(NotificationService):
 - High test coverage achievable
 
 ---
-
-## 🔍 Architectural Summary
-
-- Business logic is isolated
-- Infrastructure is replaceable
-- System is extensible without modification
-- Fully aligned with SOLID principles
-
----
-
-## 🧑‍💼 Interview Explanation
-
-> “This design applies Dependency Inversion to decouple order processing from notification infrastructure, ensuring extensibility, testability, and maintainability.”
