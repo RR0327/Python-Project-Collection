@@ -9,7 +9,7 @@ This is **architecture-first code**, suitable for interviews, academic evaluatio
 
 ---
 
-## 🎯 Project Objective
+## Project Objective
 
 - Process orders independently of infrastructure
 - Decouple business logic from notification mechanisms
@@ -18,7 +18,7 @@ This is **architecture-first code**, suitable for interviews, academic evaluatio
 
 ---
 
-## 🧠 Design Principles Applied
+## Design Principles Applied
 
 - **Single Responsibility Principle (SRP)**
 - **Open/Closed Principle (OCP)**
@@ -28,7 +28,7 @@ This is **architecture-first code**, suitable for interviews, academic evaluatio
 
 ---
 
-## 🏗️ High-Level Architecture (UML)
+## High-Level Architecture (UML)
 
 ```mermaid
 classDiagram
@@ -60,7 +60,7 @@ classDiagram
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ecommerce_core/
@@ -81,7 +81,7 @@ ecommerce_core/
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ```bash
 cd ecommerce_core
@@ -90,7 +90,7 @@ python main.py
 
 ---
 
-## 📤 Sample Output
+## Sample Output
 
 ```
 [EMAIL] Order Update: Order #101 has been successfully paid. Total amount: $249.99
@@ -99,7 +99,7 @@ python main.py
 
 ---
 
-## ✅ Why This Design Matters
+## Why This Design Matters
 
 - Order logic is **closed for modification**
 - Infrastructure is **open for extension**
@@ -109,13 +109,13 @@ python main.py
 
 ---
 
-## 🧪 Testing Advantage
+## Testing Advantage
 
 Dependencies can be mocked or replaced with fakes without touching production code.
 
 ---
 
-## 🔮 Possible Extensions
+## Possible Extensions
 
 - Payment Gateway DI (Stripe / SSLCommerz)
 - REST API using FastAPI or Django
@@ -124,7 +124,3 @@ Dependencies can be mocked or replaced with fakes without touching production co
 - Unit tests with mocks
 
 ---
-
-## 🧑‍💼 Interview One-Liner
-
-> “This project applies Dependency Inversion to decouple order processing from notification infrastructure, allowing runtime substitution without changing business logic.”
