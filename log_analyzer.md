@@ -65,3 +65,22 @@ The script uses a "Pipeline" approach to data processing.
 - _Scalability:_ Because it reads line-by-line, it takes the same amount of RAM to process a 1MB file as it does a 100GB file.
 
 - _Clean Design:_ The logic for "timing" (meta-data), "reading" (IO), and "analyzing" (logic) are completely separated into different functions. This makes the code very easy to maintain.
+
+# Log Analyzer – Performance-Aware CSV Processing
+
+_Project Goals (Checklist)_
+
+- Measure function runtime using a decorator
+
+- Process massive CSV files safely
+
+- Use generators instead of loading entire files into memory
+
+- Extract specific data points
+
+_Core Concept_
+
+- Why generators?
+
+  A normal list-based approach loads all rows into memory.
+  A generator yields one row at a time, keeping RAM usage constant.
