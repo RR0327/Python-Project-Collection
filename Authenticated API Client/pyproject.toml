@@ -1,0 +1,2 @@
+[tool.pytest.ini_options]
+addopts = "--cov=github_client --cov-report=term-missing"
