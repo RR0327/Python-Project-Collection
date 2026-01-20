@@ -201,3 +201,13 @@ you are no longer just practicing Python—you are practicing **software enginee
 ---
 
 > If you find this useful, feel free to fork, extend, and experiment.
+
+# Author
+
+Built by **Md Rakibul Hassan**
+
+CSE Undergraduate | Backend Developer | Robotics & IoT Enthusiast
+
+[LinkedIn](https://www.linkedin.com/in/mdrakibulhassanmiyaji)
+
+[GitHub](https://github.com/RR0327/)
